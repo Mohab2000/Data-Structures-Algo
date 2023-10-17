@@ -5,7 +5,7 @@ public class LinkedList {
     private Node tail;
     private int length;
 
-    class Node {
+    static class Node {
         int value;
         Node next;
 
@@ -33,6 +33,7 @@ public class LinkedList {
         System.out.println("Head: " + head.value);
     }
 
+
     public void getTail() {
         System.out.println("Tail: " + tail.value);
     }
@@ -57,5 +58,24 @@ public class LinkedList {
             tail = newNode;
         }
         length++;
+    }
+
+    public Node removeLast() {
+        if (length == 0) return null;
+        Node temp = head;
+        Node pre = head;
+
+        while (temp.next != null) {
+            pre = temp;
+            temp = temp.next;
+        }
+        tail = pre;
+        tail.next = null;
+        length -- ;
+        if(length == 0 ) {
+            head = null;
+            tail = null;
+        }
+        return temp;
     }
 }
