@@ -1,5 +1,6 @@
 package Main_Package;
 
+import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
 
 import java.util.HashMap;
@@ -7,12 +8,8 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-
-        LinkedList myLinkedList = new LinkedList(1);
-        myLinkedList.append(2);
-        myLinkedList.append(3);
-        myLinkedList.append(4);
-        myLinkedList.reverse();
-        myLinkedList.printList();
+        DoublyLinkedList myDLL = new DoublyLinkedList(1);
+        myDLL.append(2);
+        myDLL.printList();
     }
 }

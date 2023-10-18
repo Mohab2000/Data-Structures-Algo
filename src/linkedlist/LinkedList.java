@@ -166,13 +166,4 @@ public class LinkedList {
             temp = after;
         }
     }
-
-    public static class Node {
-        public int value;
-        Node next;
-
-        Node(int value) {
-            this.value = value;
-        }
-    }
 }
