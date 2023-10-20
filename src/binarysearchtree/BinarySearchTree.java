@@ -3,10 +3,10 @@ package binarysearchtree;
 public class BinarySearchTree {
     public Node root;
 
-    class Node {
-        int value;
-        Node left;
-        Node right;
+    public class Node {
+        public int value;
+        public Node left;
+        public Node right;
 
         Node(int value) {
             this.value = value;
