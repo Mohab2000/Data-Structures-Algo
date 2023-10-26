@@ -7,12 +7,14 @@ import linkedlist.DoublyLinkedList;
 import linkedlist.LinkedList;
 import stack.Stack;
 
+import java.util.Arrays;
 import java.util.HashMap;
 
 
 public class Main {
 
     public static void main(String[] args) {
+
 //        HashTable myHashTable = new HashTable();
 //
 //        myHashTable.set("nails", 100);
@@ -38,5 +40,16 @@ public class Main {
         myGraph.addVertex("B");
         myGraph.addEdge("A", "B");
         myGraph.printGraph();
+    }
+
+    public int removeDuplicates(int[] nums) {
+        int length = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] != nums[i + 1]) {
+                nums[length] = nums[i];
+                length++;
+            }
+        }
+        return length;
     }
 }
